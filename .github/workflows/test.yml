@@ -17,6 +17,8 @@ jobs:
           node-version: 15
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
       - name: Run tests
         run: yarn test
   short:
@@ -37,5 +39,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
       - name: Run unit tests
         run: npx jest
