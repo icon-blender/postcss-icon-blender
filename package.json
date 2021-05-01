@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@iconify/json": "^1.1.334",
-    "@iconify/json-tools": "^1.0.10"
+    "@iconify/json-tools": "^1.0.10",
+    "icon-blender": "^1.0.0-beta.1"
   }
 }
