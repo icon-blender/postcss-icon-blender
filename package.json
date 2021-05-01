@@ -14,6 +14,7 @@
     "test": "jest --coverage && eslint .",
 	"publish": "clean-publish"
   },
+  "homepage": "https://icon-blender.com/",
   "author": "Josh Schmidt (https://github.com/oyejorge)",
   "license": "MIT",
   "repository": "icon-blender/postcss-icon-blender",
