@@ -17,11 +17,13 @@ After
 }
 ```
 
-Then, include or import [icon-blender.css](https://github.com/icon-blender/icon-blender/blob/main/css/icon-blender.css) and the following html will display FontAwesome's align-left icon without having to include the entire FontAwesome icon colleciton.
-
+Add the icon to your html anywhere using:
 ```html
 <i class="ib ib-fa-align-left"></i>
 ```
+
+**Important** don't forget to include or import [icon-blender.css](https://github.com/icon-blender/icon-blender/blob/main/css/icon-blender.css).
+
 
 ## Custom Class Names
 
