@@ -11,7 +11,8 @@
     "fontawesome"
   ],
   "scripts": {
-    "test": "jest --coverage && eslint ."
+    "test": "jest --coverage && eslint .",
+	"publish": "clean-publish"
   },
   "author": "Josh Schmidt (https://github.com/oyejorge)",
   "license": "MIT",
