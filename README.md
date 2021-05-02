@@ -1,6 +1,6 @@
 # PostCSS Icon Blender
 
-[PostCSS](https://github.com/postcss/postcss) plugin to allow creating customized SVG icon collections from over 80,000 free and open-source icons.
+[PostCSS](https://github.com/postcss/postcss) plugin for creating customized SVG icon collections from over 80,000 free and open-source icons.
 
 ![Test Results](https://github.com/icon-blender/postcss-icon-blender/actions/workflows/test.yml/badge.svg)
 

@@ -1,7 +1,7 @@
 {
   "name": "postcss-icon-blender",
   "version": "1.0.0-beta.1",
-  "description": "PostCSS plugin to allow creating customized SVG icon collections from over 80,000 free and open-source icons",
+  "description": "PostCSS plugin for creating customized SVG icon collections from over 80,000 free and open-source icons",
   "keywords": [
     "postcss",
     "css",
