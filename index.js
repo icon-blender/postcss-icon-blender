@@ -1,24 +1,6 @@
-const {SVG, Collection}		= require('@iconify/json-tools');
+const {Collection}		= require('@iconify/json-tools');
+const BlenderSVG		= require('icon-blender/lib/blender-svg');
 
-class SimpleSVG extends SVG{
-
-	/**
-	 * We only want the viewBox and body
-	 *
-	 */
-	getAttributes(props){
-		var result	= super.getAttributes(props);
-
-		return {
-			attributes: {
-				viewBox: result.attributes.viewBox,
-			},
-			body: result.body,
-			style: '',
-		};
-	}
-
-}
 
 function escapeSVG(svg){
 	//return encodeURIComponent(svg);
@@ -49,7 +31,7 @@ module.exports = () => {
 				collection.loadIconifyCollection(collection_key);
 
 				const svg_data			= collection.getIconData(icon_name);
-				const svg				= new SimpleSVG(svg_data);
+				const svg				= new BlenderSVG(svg_data);
 				const markup			= svg.getSVG();
 
 				node.replaceWith("--url: url('data:image/svg+xml," + escapeSVG(markup) + "');");
