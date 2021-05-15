@@ -13,9 +13,21 @@ function escapeSVG(svg){
 	.replace(/\)/g,'%29')
 }
 
+/**
+ * Change the stroke width of the SVG
+ */
+function strokeSVG(svg, stroke_width){
+	if( stroke_width != 'auto' ){
+		return svg.replace(/stroke-width="[^"]*"/g,`stroke-width="${stroke_width}"`);
+	}
+	return svg;
+}
+
 function parseParams(params){
 	return params.trim().split(/\s+/);
 }
+
+var stroke_width = 'auto';
 
 module.exports = () => {
 
@@ -23,6 +35,10 @@ module.exports = () => {
 		postcssPlugin: 'postcss-icon-blender',
 
 		AtRule:{
+			'ib-stroke-width':(node) => {
+				stroke_width = node.params;
+				node.remove();
+			},
 			iconUrl:(node)=>{
 
 				const [ collection_key, icon_name ] = parseParams(node.params);
@@ -32,7 +48,9 @@ module.exports = () => {
 
 				const svg_data			= collection.getIconData(icon_name);
 				const svg				= new BlenderSVG(svg_data);
-				const markup			= svg.getSVG();
+				let markup				= svg.getSVG();
+
+				markup = strokeSVG(markup,stroke_width);
 
 				node.replaceWith("--url: url('data:image/svg+xml," + escapeSVG(markup) + "');");
 			},
