@@ -58,7 +58,7 @@ module.exports = () => {
 
 				const [ collection_key, icon_name ] = parseParams(node.params);
 
-				var replacement = `.ib-${collection_key}-${icon_name}{ @iconUrl ${collection_key} ${icon_name};}`;
+				var replacement = `.${collection_key}-${icon_name}{ @iconUrl ${collection_key} ${icon_name};}`;
 
 				node.replaceWith(replacement);
 			}
